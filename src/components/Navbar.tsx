@@ -17,21 +17,30 @@ const navBar = ({ onClick }: Props) => {
     >
       <motion.div
         className="gap-4 p-4 pl-20 pr-20 flex items-center justify-center"
-        animate={{ opacity: [0, 0, 1] }}
+        animate={{ opacity: [0, 1] }}
         transition={{ ease: "easeOut", duration: 2 }}
       >
         <label className="font-bold">Johnzyll.Dev</label>
-        <MdNightlight className="text-2xl cursor-pointer" onClick={onClick} />
+        <MdNightlight
+          className="text-2xl cursor-pointer animate-bounce"
+          onClick={onClick}
+        />
 
         <motion.ul className="nav-menu flex gap-4 float-right">
           <li>
-            <a className="cursor-pointer">Home</a>
+            <a className="nav-btn cursor-pointer hover:bg-black hover:text-white">
+              Home
+            </a>
           </li>
           <li>
-            <a className="cursor-pointer">About</a>
+            <a className="nav-btn cursor-pointer hover:bg-black hover:text-white">
+              About
+            </a>
           </li>
           <li>
-            <a className="cursor-pointer">Contact</a>
+            <a className="nav-btn cursor-pointer hover:bg-black hover:text-white">
+              Contact
+            </a>
           </li>
         </motion.ul>
 

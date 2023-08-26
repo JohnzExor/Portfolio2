@@ -2,8 +2,12 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="w-full h-screen items-center flex justify-center">
-      <div>
+    <div className="w-full h-screen items-center flex justify-center shadow-2xl">
+      <motion.div
+        initial={{ y: 200 }}
+        whileInView={{ y: 0 }}
+        transition={{ duration: 1 }}
+      >
         <motion.h1
           className="home-title text-8xl"
           animate={{ x: [100, 0] }}
@@ -18,7 +22,7 @@ const Home = () => {
         >
           My dream is to become a future Web/Game Developer
         </motion.p>
-      </div>
+      </motion.div>
     </div>
   );
 };

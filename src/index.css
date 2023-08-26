@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.nav-btn:hover {
+    border: solid 0.1em;
+    border-radius: 1em;
+    padding: 0.2em 1em 0.2em 1em;
+    transition: 0.5s;
+}
+
 @media only screen and (max-width: 767px) {
 
     .side-bar-btn {
