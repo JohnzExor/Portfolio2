@@ -2,17 +2,16 @@ import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div className="w-full h-screen items-center flex justify-center shadow-2xl">
+    <div
+      className="w-full h-screen items-center flex justify-center shadow-2xl"
+      id="home"
+    >
       <motion.div
         initial={{ y: 200 }}
         whileInView={{ y: 0 }}
         transition={{ duration: 1 }}
       >
-        <motion.h1
-          className="home-title text-8xl"
-          animate={{ x: [100, 0] }}
-          transition={{ ease: "easeOut", duration: 2 }}
-        >
+        <motion.h1 className="home-title text-8xl">
           Future Web/Game Developer
         </motion.h1>
         <motion.p

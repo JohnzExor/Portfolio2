@@ -1,33 +1,53 @@
 import { motion } from "framer-motion";
+import { BsSendFill } from "react-icons/bs";
 const Contact = () => {
   return (
-    <div className="h-screen w-full justify-center items-center flex">
-      <div>
+    <div
+      className="h-screen w-full justify-center items-center flex"
+      id="contact"
+    >
+      <motion.div className="text-center">
         <motion.h1
-          className=" text-7xl"
-          initial={{ y: 0, scale: 1 }}
-          whileInView={{ y: [0, 0, -300], scale: 0.5 }}
-          transition={{ duration: 4 }}
+          className="contact-title text-9xl mb-4"
+          whileInView={{ y: [300, 300, 0] }}
+          transition={{ ease: "easeOut", duration: 3 }}
         >
-          Contact me
+          Lets Talk
         </motion.h1>
-        <motion.div
-          className="border border-black"
-          initial={{ opacity: 100, y: 100 }}
-          whileInView={{ opacity: [0, 0, 1], y: 0 }}
-          transition={{ duration: 5 }}
+        <motion.form
+          className="text-center shadow-2xl p-10 rounded-2xl border-t-4 border-black"
+          whileInView={{ opacity: [0, 0, 0, 1], y: [50, 0] }}
+          transition={{ ease: "easeOut", duration: 5 }}
         >
-          <form className="p-4 text-center">
-            <input type="text" placeholder="Full name" />
-            <br />
-            <input type="email" placeholder="Email Address" />
-            <br />
-            <textarea placeholder="Message" />
-            <br />
-            <button>Submit</button>
-          </form>
-        </motion.div>
-      </div>
+          <h1 className="mb-4 text-2xl font-bold">Ask me anything</h1>
+          <textarea
+            className="w-full h-80 border p-4 border-b-4 border-black"
+            placeholder="Enter your message"
+          />
+          <br />
+          <input
+            className="p-4 border-b-4"
+            type="text"
+            placeholder="Enter your name"
+          />
+          <input
+            className="p-4 border-b-4"
+            type="email"
+            placeholder="Enter your email"
+          />
+          <br />
+          <div className="flex gap-4 items-center justify-center mt-4">
+            <p>Send me a Message.</p>
+            <button
+              className="flex bg-black text-white p-2 rounded-lg hover:bg-white hover:text-black hover:duration-500 gap-4 hover:animate-pulse"
+              type="submit"
+            >
+              <BsSendFill className="text-2xl" />
+              Send
+            </button>
+          </div>
+        </motion.form>
+      </motion.div>
     </div>
   );
 };

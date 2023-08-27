@@ -28,17 +28,17 @@ const navBar = ({ onClick }: Props) => {
 
         <motion.ul className="nav-menu flex gap-4 float-right">
           <li>
-            <a className="nav-btn cursor-pointer hover:bg-black hover:text-white">
+            <a className="nav-btn cursor-pointer" href="#home">
               Home
             </a>
           </li>
           <li>
-            <a className="nav-btn cursor-pointer hover:bg-black hover:text-white">
+            <a className="nav-btn cursor-pointer" href="#about">
               About
             </a>
           </li>
           <li>
-            <a className="nav-btn cursor-pointer hover:bg-black hover:text-white">
+            <a className="nav-btn cursor-pointer" href="#contact">
               Contact
             </a>
           </li>
