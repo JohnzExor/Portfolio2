@@ -6,10 +6,10 @@ const Contact = () => {
       className="h-screen w-full justify-center items-center flex"
       id="contact"
     >
-      <motion.div className="text-center">
+      <motion.div className="contact-container text-center flex justify-center items-center gap-20">
         <motion.h1
           className="contact-title text-9xl mb-4"
-          whileInView={{ y: [300, 300, 0] }}
+          whileInView={{ y: [100, 100, 0] }}
           transition={{ ease: "easeOut", duration: 3 }}
         >
           Lets Talk
@@ -21,7 +21,7 @@ const Contact = () => {
         >
           <h1 className="mb-4 text-2xl font-bold">Ask me anything</h1>
           <textarea
-            className="w-full h-80 border p-4 border-b-4 border-black"
+            className="contact-textarea w-full h-80 border p-4 border-b-4 border-black"
             placeholder="Enter your message"
           />
           <br />
